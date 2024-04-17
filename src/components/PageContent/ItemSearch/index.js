@@ -83,19 +83,22 @@ const ItemSearch = ({ searchHandles, languagesHandles, typesHandles }) => {
   }
 
   const dragMove = (e) =>{
-    if(e.touches)
+    if(headerRef && headerRef.current)
     {
-      dragPosY = e.touches[0].screenY - dragInitialPos
-
-      if(e.touches[0].screenY > dragRoofLimit)
-        headerRef.current.parentElement.style.transform = `translateY(${dragPosY}px)`
-    }
-    else
-    {
-      dragPosY = e.screenY - dragInitialPos
-
-      if(e.screenY > dragRoofLimit)
-        headerRef.current.parentElement.style.transform = `translateY(${dragPosY}px)`
+      if(e.touches)
+      {
+        dragPosY = e.touches[0].screenY - dragInitialPos
+  
+        if(e.touches[0].screenY > dragRoofLimit)
+          headerRef.current.parentElement.style.transform = `translateY(${dragPosY}px)`
+      }
+      else
+      {
+        dragPosY = e.screenY - dragInitialPos
+  
+        if(e.screenY > dragRoofLimit)
+          headerRef.current.parentElement.style.transform = `translateY(${dragPosY}px)`
+      }
     }
   }
 
@@ -122,7 +125,9 @@ const ItemSearch = ({ searchHandles, languagesHandles, typesHandles }) => {
     }
     else
     {
-      headerRef.current.parentElement.style.transform = ''
+      if(headerRef && headerRef.current)
+        headerRef.current.parentElement.style.transform = ''
+
       document.removeEventListener('mousemove', dragMove)
       document.removeEventListener('touchmove', dragMove)
     }

@@ -52,7 +52,7 @@ const UserProfile = ({user}) => {
           {user.location ?
             <UserInfo src={'/assets/location.svg'} description={user.location} link={`https://www.google.com/maps/place/${user.location}`}/> : null}
           {user.blog ?
-            <UserInfo src={'/assets/link.svg'} description={user.blog} link={`https://${user.blog}`}/> : null}
+            <UserInfo src={'/assets/link.svg'} description={user.blog} link={`http://${user.blog}`}/> : null}
           {user.twitter_username ?
             <UserInfo src={'/assets/social.svg'} description={user.twitter_username} link={`https://twitter.com/${user.twitter_username}`}/> : null}
         </div>
