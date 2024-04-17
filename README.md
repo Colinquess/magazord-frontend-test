@@ -41,9 +41,9 @@ https://www.figma.com/file/sf1CmqcEZbUzkeZOA4AUGj/TESTE-FRONT-MAGAZORD?node-id=0
 
 ## Como Executar
 
-Entrea pasta principal e digite?
+Entre na pasta principal e digite:
 
 * npm i
 * npm start
 
-Arquivos de configuração "Config.js" e "Config.scss" estão disponíveis em src/ para configurar o usuário e/ou as cores da página
+Arquivos de configuração "Config.js" e "Config.scss" estão disponiveis em "src/" para configurar o usuário e/ou as cores da página
