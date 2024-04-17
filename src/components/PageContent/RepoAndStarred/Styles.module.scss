@@ -1,0 +1,118 @@
+@import "../../../Config.scss";
+
+body {
+  .hiddenSection {
+    display: none;
+  }
+
+  section {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section:hover {
+    box-shadow: 0 0 10px $DarkerGrey;
+  }
+
+  .container {
+    width: 100%;
+    display: inline-block;
+    margin-left: 30px;
+    flex-direction: column;
+  }
+
+  hr {
+    display: none;
+  }
+
+  .link {
+    width: 100%;
+    text-decoration: none;
+  }
+
+  .link:hover{
+    text-decoration: underline $StdBlue;
+  }
+
+  .title {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    color: $TotalBlack;
+  }
+
+  .name {
+    font-weight: 600;
+    color: $StdBlue;
+  }
+
+  .separator {
+    $horizontalPadding: 3px;
+    
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.09px;
+    text-align: left;
+    padding-left: $horizontalPadding;
+    padding-right: $horizontalPadding;
+  }
+
+  .description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 14px;
+    margin-top: 14px;
+    color: $StdGrey;
+  }
+
+  .footer {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .fork {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .fork * {
+    padding-right: 10px;
+  }
+
+  // Tablet
+  @media (max-width: $Tablet) {
+    .container {
+      margin-left: 20px;
+      margin-bottom: 0px;  
+    }
+    hr {
+      display: block;
+      margin: 32px 0px;
+      border: 1px solid $StdWhite;
+    }
+  }
+
+  @media (max-width: $Mobile) {
+    .container {
+      margin-left: 20px;
+      margin-bottom: 0px;  
+    }
+    hr {
+      display: block;
+      margin: 32px 0px;
+      border: 1px solid $StdWhite;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+@import "../../../../Config.scss";
+
+body {
+  .unSelectedItem {
+    filter: $StdGreyFilter;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    height: 25px;
+    margin-bottom: 49px;
+    cursor: pointer;
+  }
+
+  .enable, .disabled {
+    line-height: 21px;
+    margin-bottom: 0px;
+    padding-bottom: 8px;
+    width: 195px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+
+  .enable {
+    border-bottom: 2px solid $PinkishOrange;
+    .name {
+      color: 000000;
+    }
+  }
+
+  .disabled {
+    border-bottom: 2px solid $TotalWhite;
+    .name {
+      color: $StdGrey;
+    }
+  }
+
+  .name {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    margin-left: 14px;
+    margin-right: 6px;
+  }
+
+  .counter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 40px;
+    height: 24px;
+    background: $StdWhite;
+    border: 1px solid $DarkerGrey;
+    border-radius: 59px;
+  }
+
+  .counterNumber {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: $StdGrey;
+  }
+}

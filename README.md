@@ -38,3 +38,12 @@ https://www.figma.com/file/sf1CmqcEZbUzkeZOA4AUGj/TESTE-FRONT-MAGAZORD?node-id=0
 
 ## Envio do teste
 * Suba o repositório no seu Github e envie o link diretamente para o seu recrutador. Obs.: Não serão aceitos alterações após o envio
+
+## Como Executar
+
+Entrea pasta principal e digite?
+
+* npm i
+* npm start
+
+Arquivos de configuração "Config.js" e "Config.scss" estão disponíveis em src/ para configurar o usuário e/ou as cores da página

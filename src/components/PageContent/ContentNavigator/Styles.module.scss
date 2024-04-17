@@ -1,0 +1,24 @@
+@import "../../../Config.scss";
+
+body {
+  .container {
+    display: flex;
+  }
+
+  .container > span:not(:first-child) {
+    margin-left: 38px;
+  }
+
+  // Mobile
+  @media (max-width: $Mobile) {
+    .container {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

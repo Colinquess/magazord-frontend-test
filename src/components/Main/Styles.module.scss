@@ -1,0 +1,27 @@
+@import "../../Config.scss";
+
+body {
+  main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .container {
+    display: flex;
+    margin-top: 40px;
+    width: 80em;
+  }
+
+  @media (max-width: $Mobile) {
+    .container {
+      $horizontalPadding: 24px;
+
+      margin-top: 20px;
+      display: block;
+      padding: 20px $horizontalPadding;
+      max-width: calc(100vw - ($horizontalPadding * 2));
+    }
+  }
+}

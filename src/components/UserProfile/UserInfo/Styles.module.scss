@@ -1,0 +1,25 @@
+@import "../../../Config.scss";
+
+body {
+  .contentList {
+    display: flex;
+    align-items: center;
+    height: 16px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: $StdBlue;
+    text-decoration: none;
+    &:not(&:nth-last-child(1)) {
+      margin-bottom: 16px;
+    }
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  .iconList {
+    margin-right: 10px;
+    filter: $StdBlueFilter;
+  }
+}

@@ -1,0 +1,58 @@
+@import "../../Config.scss";
+
+body {
+    
+  header {
+    background-color: $BlueishBlack;
+    color: $TotalWhite;
+    width: 100%;
+    height: 70px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    width: 80em;
+  }
+
+  .items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 226px;
+    height: 100%;
+  }
+
+  .iconGithub {
+    filter: $TotalWhiteFilter;
+  }
+
+  .divider {
+    width: 10px;
+    height: 28px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .profile {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (max-width: $Tablet) {
+    .container {
+      width: 45em;
+    }
+  }
+
+  // Mobile
+  @media (max-width: $Mobile) {
+    header {
+      display: none;
+    }
+  }
+}

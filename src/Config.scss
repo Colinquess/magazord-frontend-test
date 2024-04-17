@@ -1,0 +1,43 @@
+// Breakpoints: https://blog.logrocket.com/css-breakpoints-responsive-design/
+
+/* 
+Small devices such as large phones (640px and up)
+@media only screen and (min-width: 40em) {...}
+
+Medium devices such as tablets (768px and up)
+@media only screen and (min-width: 48em) {...}
+
+Large devices such as laptops (1024px and up)
+@media only screen and (min-width: 64em) {...}
+
+Largest devices such as desktops (1280px and up) 
+@media only screen and (min-width: 80em) {...}
+*/
+
+$Desktop: 80em;
+//$Laptop: 64em; // Not Considered
+$Tablet: 48em;
+$Mobile: 40em;
+
+$TotalWhite: #FFFFFF;
+$TotalBlack: #000000;
+
+$StdWhite: #F4F4F4;
+$StdGrey: #989898;
+$StdBlue: #0587FF;
+
+/* Filter to color formula: https://codepen.io/sosuke/pen/Pjoqqp */
+$StdBlueFilter: invert(33%) sepia(100%) saturate(1265%) hue-rotate(192deg) brightness(101%) contrast(108%);
+$StdGreyFilter: invert(65%) sepia(1%) saturate(0%) hue-rotate(287deg) brightness(93%) contrast(92%);
+$StdRedFilter: invert(30%) sepia(59%) saturate(3153%) hue-rotate(334deg) brightness(101%) contrast(99%);
+$TotalWhiteFilter: invert(100%) sepia(4%) saturate(7%) hue-rotate(2deg) brightness(103%) contrast(100%);
+$DarkerGreyFilter: invert(90%) sepia(0%) saturate(42%) hue-rotate(220deg) brightness(91%) contrast(84%);
+
+$BlueishBlack: #24292E;
+$PinkishOrange: #FD8C73; // Salmon?
+
+$LighterBlack: #262626;
+$DarkBlue: #0056A6;
+$DarkerGrey: #DBDBDB;
+
+$HoverSelection: linear-gradient(89.89deg, #0056a60d -30.01%, #0587ff0d 125.65%);
