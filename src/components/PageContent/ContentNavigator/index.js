@@ -6,7 +6,7 @@ export default function ContentNavigator({ starreds, repos, menu, setMenu }) {
   return (
     <nav className={styles.container}>
       <NavigatorItem
-        image="/assets/icon-repositories.svg"
+        image="/assets/repositories.svg"
         name="Repositories"
         counter={repos.length}
         selected={menu === 'UserRepositories'}
@@ -15,7 +15,7 @@ export default function ContentNavigator({ starreds, repos, menu, setMenu }) {
       />
 
       <NavigatorItem
-        image="/assets/icon-starred.svg"
+        image="/assets/starred.svg"
         name="Starred"
         counter={starreds.length}
         selected={menu === 'UserStarreds'}

@@ -38,13 +38,13 @@ export default function UserRepositories({ repos, types, languages, search }) {
                 </p>
                 <div className={styles.footer}>
                   <div className={styles.fork}>
-                    <img src={'/assets/icon-repo-starred.svg'}/>
+                    <img src={'/assets/repo-starred.svg'}/>
                     <span>
                       {repo.stargazers_count}
                     </span>
                   </div>
                   <div className={styles.fork}>
-                    <img src={'/assets/icon-fork.svg'}/>
+                    <img src={'/assets/fork.svg'}/>
                     <span>
                       {repo.forks_count}
                     </span>

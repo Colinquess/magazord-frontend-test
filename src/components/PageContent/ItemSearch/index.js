@@ -170,7 +170,7 @@ const ItemSearch = ({ searchHandles, languagesHandles, typesHandles }) => {
 
         <div className={styles.searchContainer}>
           <img 
-            src={`/assets/icon-search.svg`}
+            src={`/assets/search.svg`}
             className={styles.searchMagnify}
             onClick={handleMagnifyClick}
           />
@@ -187,7 +187,7 @@ const ItemSearch = ({ searchHandles, languagesHandles, typesHandles }) => {
         <div className={(showSearchBox ? [styles.hiddenButtonContainer, styles.buttonContainer].join(' ') : styles.buttonContainer)}>
           <div>
             <span onClick={handleTypeClick} className={styles.buttonOption}>
-              <img src={`/assets/icon-checked.svg`} className={styles.iconChecked}/>
+              <img src={`/assets/checked.svg`} className={styles.iconChecked}/>
               <span className={styles.buttonText}>
                 Type
               </span>
@@ -197,14 +197,14 @@ const ItemSearch = ({ searchHandles, languagesHandles, typesHandles }) => {
                 <div className={styles.listBody}>
                   <div className={styles.listHeader} ref={typeHeaderRef}>
                     <div className={styles.listHandle}>
-                      <img src={`/assets/icon-rectangle.svg`} className={styles.iconRectangle}/>
+                      <img src={`/assets/rectangle.svg`} className={styles.iconRectangle}/>
                     </div>
                     <div className={styles.listTitle}>
                       <span className={styles.listTitleText}>
                         Type
                       </span>
                       <img
-                        src={`/assets/icon-x.svg`}
+                        src={`/assets/x.svg`}
                         onClick={handleHideOptions}
                         className={styles.listTitleX}
                       />
@@ -235,7 +235,7 @@ const ItemSearch = ({ searchHandles, languagesHandles, typesHandles }) => {
 
           <div>
             <span onClick={handleLanguageClick} className={styles.buttonOption}>
-              <img src={`/assets/icon-checked.svg`} className={styles.iconChecked}/>
+              <img src={`/assets/checked.svg`} className={styles.iconChecked}/>
               <span
                 className={styles.buttonText}
               >
@@ -247,14 +247,14 @@ const ItemSearch = ({ searchHandles, languagesHandles, typesHandles }) => {
                 <div className={styles.listBody}>
                   <div className={styles.listHeader} ref={languageHeaderRef}>
                     <div className={styles.listHandle}>
-                      <img src={`/assets/icon-rectangle.svg`} className={styles.iconRectangle}/>
+                      <img src={`/assets/rectangle.svg`} className={styles.iconRectangle}/>
                     </div>
                     <div className={styles.listTitle}>
                       <span className={styles.listTitleText}>
                         Language
                       </span>
                       <img
-                        src={`/assets/icon-x.svg`}
+                        src={`/assets/x.svg`}
                         onClick={handleHideOptions}
                         className={styles.listTitleX}
                       />

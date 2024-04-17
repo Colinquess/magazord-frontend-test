@@ -11,7 +11,7 @@ export default function ProfilePicture({avatar_url}) {
         <div className={styles.contentIcon}>
           <img
             className={styles.iconProfileAvatar}
-            src='/assets/icon-profile-avatar.svg'
+            src='/assets/profile-avatar.svg'
           />
         </div>
       </div>

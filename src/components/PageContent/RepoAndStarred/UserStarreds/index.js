@@ -41,7 +41,7 @@ export default function UserStarreds({ starreds, types, languages, search }) {
                     {starred.language}
                   </div>
                   <div className={styles.fork}>
-                    <img src={'/assets/icon-fork.svg'}/>
+                    <img src={'/assets/fork.svg'}/>
                     <span>
                       {starred.forks_count}
                     </span>

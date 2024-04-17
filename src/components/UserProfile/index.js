@@ -41,20 +41,20 @@ const UserProfile = ({user}) => {
           <span className={styles.info}>
             Informações Adicionais
           </span>
-          <img className={showInfo ? styles.toAbove : styles.toBelow} src={'/assets/icon-arrow-up.svg'}/>
+          <img className={showInfo ? styles.toAbove : styles.toBelow} src={'/assets/arrow-up.svg'}/>
         </div>
       : null}
 
       {showInfo ?
         <div className={styles.contentInfo}>
           {user.company ?
-            <UserInfo src={'/assets/icon-company.svg'} description={user.company} link={`https://duckduckgo.com/?q=%5C${encodeURIComponent(user.company)}`}/> : null}
+            <UserInfo src={'/assets/company.svg'} description={user.company} link={`https://duckduckgo.com/?q=%5C${encodeURIComponent(user.company)}`}/> : null}
           {user.location ?
-            <UserInfo src={'/assets/icon-location.svg'} description={user.location} link={`https://www.google.com/maps/place/${user.location}`}/> : null}
+            <UserInfo src={'/assets/location.svg'} description={user.location} link={`https://www.google.com/maps/place/${user.location}`}/> : null}
           {user.blog ?
-            <UserInfo src={'/assets/icon-link.svg'} description={user.blog} link={`https://${user.blog}`}/> : null}
+            <UserInfo src={'/assets/link.svg'} description={user.blog} link={`https://${user.blog}`}/> : null}
           {user.twitter_username ?
-            <UserInfo src={'/assets/icon-social.svg'} description={user.twitter_username} link={`https://twitter.com/${user.twitter_username}`}/> : null}
+            <UserInfo src={'/assets/social.svg'} description={user.twitter_username} link={`https://twitter.com/${user.twitter_username}`}/> : null}
         </div>
       : null}
     </div>
