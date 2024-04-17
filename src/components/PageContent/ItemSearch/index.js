@@ -19,7 +19,6 @@ const ItemSearch = ({ searchHandles, languagesHandles, typesHandles }) => {
   const typeHeaderRef = useRef(null);
   const languageHeaderRef = useRef(null);
 
-
   const handleLanguageStateChange = (e) => {
 
     const languageindex = e.target.getAttribute('languageindex')
@@ -83,12 +82,7 @@ const ItemSearch = ({ searchHandles, languagesHandles, typesHandles }) => {
     setShowSearchBox(false)
   }
 
-  function dragMove(e){
-
-    console.log('dragInitialPos: ', dragInitialPos)
-    console.log('dragPosY: ', dragPosY)
-    console.log('dragRoofLimit: ', dragRoofLimit)
-  
+  const dragMove = (e) =>{
     if(e.touches)
     {
       dragPosY = e.touches[0].screenY - dragInitialPos
@@ -105,7 +99,7 @@ const ItemSearch = ({ searchHandles, languagesHandles, typesHandles }) => {
     }
   }
 
-  function dragStart(e) {
+  const dragStart = (e) => {
     if(e.touches)
     {
       dragRoofLimit = e.touches[0].screenY
@@ -121,8 +115,7 @@ const ItemSearch = ({ searchHandles, languagesHandles, typesHandles }) => {
     document.addEventListener('touchmove', dragMove)
   }
 
-  function dragEnd(e) {
-
+  const dragEnd = (e) => {
     if(dragPosY > (window.innerHeight * 0.5))
     {
       handleHideOptions()
