@@ -11,7 +11,7 @@ export default function UserRepositories({ repos, types, languages, search }) {
       languages.find( language => language.check && language.name === repo.language) || // Language of repo checked
       types.find( type => type.check && repo[type.id] === true) // Type of repo checked
     )
-      return false;
+      return false
 
     return true
   }

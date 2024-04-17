@@ -1,6 +1,6 @@
 import { useState } from "react"
 import styles from './Styles.module.scss'
-import NavigatorItem from "./NavigatorItem";
+import NavigatorItem from "./NavigatorItem"
 
 export default function ContentNavigator({ starreds, repos, menu, setMenu }) {
   return (

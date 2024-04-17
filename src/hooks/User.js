@@ -17,25 +17,25 @@ const User = {
 
     try
     {
-      const response = await fetch(Config.userEndpoints.userData);
+      const response = await fetch(Config.userEndpoints.userData)
       const person = await response.json()
 
-      gitUser.login = person.login;
-      gitUser.avatar_url = person.avatar_url;
-      gitUser.name = person.name || person.login;
-      gitUser.bio = person.bio;
-      gitUser.company = person.company;
-      gitUser.location = person.location;
-      gitUser.blog = person.blog;
-      gitUser.twitter_username = person.twitter_username;
+      gitUser.login = person.login
+      gitUser.avatar_url = person.avatar_url
+      gitUser.name = person.name || person.login
+      gitUser.bio = person.bio
+      gitUser.company = person.company
+      gitUser.location = person.location
+      gitUser.blog = person.blog
+      gitUser.twitter_username = person.twitter_username
     }
     catch(error)
     {
-      const errorCast = new Error(error);
-      console.log('Error found whilist trying to get user: ', errorCast.name, errorCast.message, errorCast.cause);
+      const errorCast = new Error(error)
+      console.log('Error found whilist trying to get user: ', errorCast.name, errorCast.message, errorCast.cause)
     }
 
-    return gitUser;
+    return gitUser
   },
 
   getRepos: async () => {
@@ -43,7 +43,7 @@ const User = {
     let gitRepos= []
 
     try{
-      const response = await fetch(Config.userEndpoints.userRepos);
+      const response = await fetch(Config.userEndpoints.userRepos)
       const repos = await response.json()
 
       gitRepos = repos.map(repo => {
@@ -59,15 +59,15 @@ const User = {
           archived: repo.archived,
           mirrors: repo.mirror_url
         }
-      });
+      })
     }
     catch(error)
     {
-      const errorCast = new Error(error);
-      console.log('Error found whilist trying to get repos: ', errorCast.name, errorCast.message, errorCast.cause);
+      const errorCast = new Error(error)
+      console.log('Error found whilist trying to get repos: ', errorCast.name, errorCast.message, errorCast.cause)
     }
 
-    return gitRepos;
+    return gitRepos
   },
 
   getStarred: async () => {
@@ -75,7 +75,7 @@ const User = {
     let gitStarred = []
 
     try{
-      const response = await fetch(Config.userEndpoints.userStarred);
+      const response = await fetch(Config.userEndpoints.userStarred)
       const starreds = await response.json()
 
       gitStarred = starreds.map(starred => {
@@ -94,11 +94,11 @@ const User = {
     }
     catch(error)
     {
-      const errorCast = new Error(error);
-      console.log('Error found whilist trying to get starred: ', errorCast.name, errorCast.message, errorCast.cause);
+      const errorCast = new Error(error)
+      console.log('Error found whilist trying to get starred: ', errorCast.name, errorCast.message, errorCast.cause)
     }
 
-    return gitStarred;
+    return gitStarred
   }
 }
 

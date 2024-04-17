@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import PageContent from '../PageContent'
 import UserProfile from '../UserProfile'
 import styles from './Styles.module.scss'
@@ -15,7 +15,7 @@ const Main = () => {
 
       const UserData = localStorage.getItem('UserData')
 
-      const ParsedUserData = JSON.parse(UserData);
+      const ParsedUserData = JSON.parse(UserData)
 
       if( UserData && ParsedUserData.user.login === Config.Git_User)
         setUserData(ParsedUserData)

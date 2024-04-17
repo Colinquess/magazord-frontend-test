@@ -11,13 +11,13 @@ const ItemSearch = ({ searchHandles, languagesHandles, typesHandles }) => {
   const [showType, setShowType] = useState(false)
   const [showSearchBox, setShowSearchBox] = useState(false)
 
-  let dragInitialPos = 0;
-  let dragPosY = 0;
-  let dragRoofLimit = 0;
+  let dragInitialPos = 0
+  let dragPosY = 0
+  let dragRoofLimit = 0
   let headerRef = null
 
-  const typeHeaderRef = useRef(null);
-  const languageHeaderRef = useRef(null);
+  const typeHeaderRef = useRef(null)
+  const languageHeaderRef = useRef(null)
 
   const handleLanguageStateChange = (e) => {
 
@@ -27,9 +27,9 @@ const ItemSearch = ({ searchHandles, languagesHandles, typesHandles }) => {
 
     let changedLanguages = [...languages]
 
-    changedLanguages[languageindex].check = checked;
+    changedLanguages[languageindex].check = checked
 
-    setLanguages(changedLanguages);
+    setLanguages(changedLanguages)
 
   }
 
@@ -41,9 +41,9 @@ const ItemSearch = ({ searchHandles, languagesHandles, typesHandles }) => {
 
     let changedTypes = [...types]
 
-    changedTypes[typeindex].check = checked;
+    changedTypes[typeindex].check = checked
 
-    setTypes(changedTypes);
+    setTypes(changedTypes)
   }
 
   const handleSearchChange = (e) => {
@@ -88,14 +88,14 @@ const ItemSearch = ({ searchHandles, languagesHandles, typesHandles }) => {
       dragPosY = e.touches[0].screenY - dragInitialPos
 
       if(e.touches[0].screenY > dragRoofLimit)
-        headerRef.current.parentElement.style.transform = `translateY(${dragPosY}px)`;
+        headerRef.current.parentElement.style.transform = `translateY(${dragPosY}px)`
     }
     else
     {
       dragPosY = e.screenY - dragInitialPos
 
       if(e.screenY > dragRoofLimit)
-        headerRef.current.parentElement.style.transform = `translateY(${dragPosY}px)`;
+        headerRef.current.parentElement.style.transform = `translateY(${dragPosY}px)`
     }
   }
 
@@ -103,7 +103,7 @@ const ItemSearch = ({ searchHandles, languagesHandles, typesHandles }) => {
     if(e.touches)
     {
       dragRoofLimit = e.touches[0].screenY
-      dragInitialPos = e.touches[0].screenY;
+      dragInitialPos = e.touches[0].screenY
     }
     else
     {
@@ -122,7 +122,7 @@ const ItemSearch = ({ searchHandles, languagesHandles, typesHandles }) => {
     }
     else
     {
-      headerRef.current.parentElement.style.transform = '';
+      headerRef.current.parentElement.style.transform = ''
       document.removeEventListener('mousemove', dragMove)
       document.removeEventListener('touchmove', dragMove)
     }
@@ -133,7 +133,7 @@ const ItemSearch = ({ searchHandles, languagesHandles, typesHandles }) => {
   }
 
   const pullDownToCloseHandler = () => {
-    if(headerRef && headerRef.current && !(window.innerWidth > 672))
+    if(headerRef && headerRef.current && !(window.innerWidth > 641))
     {
       headerRef.current.addEventListener('mousedown', dragStart)
       headerRef.current.addEventListener('touchstart', dragStart)
@@ -141,23 +141,23 @@ const ItemSearch = ({ searchHandles, languagesHandles, typesHandles }) => {
       document.addEventListener('mouseup', dragEnd)
       document.addEventListener('touchend', dragEnd)
     }
-  };
+  }
 
   useEffect(() => {
     if(showType)
     {
       headerRef = typeHeaderRef
-      pullDownToCloseHandler();
+      pullDownToCloseHandler()
     }
-  }, [showType]);
+  }, [showType])
 
   useEffect(() => {
     if(showLanguage)
     {
       headerRef = languageHeaderRef
-      pullDownToCloseHandler();
+      pullDownToCloseHandler()
     }
-  }, [showLanguage]);
+  }, [showLanguage])
 
   return (
     <>

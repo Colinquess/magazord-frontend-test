@@ -24,13 +24,13 @@ const PageContent = ({repos, starreds}) => {
       let arr = [...repos.map(repo => repo.language), ...starreds.map(starred => starred.language)]
       const languages = [...new Set(arr)] // Set should remove the duplicates
 
-      let newLanguages = [];
+      let newLanguages = []
       newLanguages.push({id: 'all', name:'All', check: true})
 
       languages.filter(Boolean).forEach(desc => newLanguages.push(
             {id: desc.toLowerCase(),  name: desc,       check: false }))
 
-      setLanguages(newLanguages);
+      setLanguages(newLanguages)
 
       setTypes([
         {id: 'all',               name:'All',       check: true},

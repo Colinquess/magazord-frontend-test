@@ -6,5 +6,5 @@ export default function UserInfo({src, description, link}) {
       <img className={styles.iconList} src={src}/>
       {description}
     </a>
-  );
+  )
 }

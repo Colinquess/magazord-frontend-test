@@ -1,5 +1,5 @@
-import PageHeader from "./components/PageHeader";
-import Main from './components/Main';
+import PageHeader from "./components/PageHeader"
+import Main from './components/Main'
 
 const App = () => {
   return (

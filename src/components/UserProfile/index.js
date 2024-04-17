@@ -7,11 +7,17 @@ const UserProfile = ({user}) => {
 
   const [showInfo, setShowInfo] = useState(0)
 
-  const [windowSize, setWindowSize] = useState(window.innerWidth)
+  const [winSize, setWinSize] = useState(window.innerWidth)
+
+  useEffect(() => setShowInfo(winSize > 641), [winSize])
 
   useEffect(() => {
-    setShowInfo(windowSize > 672)
-  }, [windowSize])
+    const onResize = () => setWinSize(window.innerWidth)
+
+    window.addEventListener('resize', onResize)
+
+    return () => window.removeEventListener('resize', onResize)
+  }, [])
 
   const handleClickInfo = () => setShowInfo(state => !state)
 

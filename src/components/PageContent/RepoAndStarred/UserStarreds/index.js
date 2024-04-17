@@ -11,7 +11,7 @@ export default function UserStarreds({ starreds, types, languages, search }) {
       languages.find( language => language.check && language.name === starred.language) ||  // Language of starred checked
       types.find( type => type.check && starred[type.id] === true) // Type of starred checked
     )
-      return false;
+      return false
 
     return true
   }
